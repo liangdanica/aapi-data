@@ -1,8 +1,8 @@
-.parallax-window {
-    min-height: 400px;
-    background: transparent;
-}
-
-#bg1 {
-	background-size: cover;
+#section_1 {
+	background-image: url("images/snow.png");
+	height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
