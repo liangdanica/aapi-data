@@ -1,4 +1,5 @@
 .parallax-window {
     min-height: 400px;
     background: transparent;
+    background-size: 100%;
 }
