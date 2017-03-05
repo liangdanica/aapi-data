@@ -1,8 +1,16 @@
-#section_1 {
-	background-image: url("images/snow.png");
+
+.container-fluid {
 	height: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#section_1 {
+	background-image: url("images/nyc.png");
+}
+
+#section_2 {
+	background-image: url("images/snow.png");	
 }
