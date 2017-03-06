@@ -47,6 +47,11 @@ p em {
   color: #8CD3C7;
 }
 
+a {
+    text-decoration: none;
+    color: #8CD3C7;
+}
+
 #lobster {
     font-family: 'Lobster Two', cursive;
 }
