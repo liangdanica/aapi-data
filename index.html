@@ -14,33 +14,293 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- Parallax -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="/js/parallax.min.js"></script> -->
+<!-- jQuery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Leaflet -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+ <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 
 <!-- Styles -->
-<link href="/css/style.css" rel="stylesheet" media="screen">
+<link href="style.css" rel="stylesheet" media="screen">
 <link href="/css/font-awesome.min.css" rel="stylesheet" media="screen">
+<!-- <script src="map.js"></script> -->
+
+<!-- Fonts -->
+<style>
+@import url('https://fonts.googleapis.com/css?family=Lobster+Two|Oswald');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+</style>
+
+
 </head>
+<body>
 
-<!-- <nav class="navbar navbar-default">
-	<div class="container-fluid">
-		<div class="collapse navbar-collapse" id="nav">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-			</ul>
-		</div>
-	</div>
-</nav> -->
+<script>
+	// init controller
+	var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
 
-<div class="container-fluid" id="section_1">
-<h1>Section 1</h1>
-</div>
+	// build scenes
+	new ScrollMagic.Scene({triggerElement: "#section_1"})
+					.setTween("#section_1 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
 
-<!-- <div class="container-fluid" id="section_2">
-<h1>Section 2</h1>
+	new ScrollMagic.Scene({triggerElement: "#section_2"})
+					.setTween("#section_2 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
+
+	new ScrollMagic.Scene({triggerElement: "#section_3"})
+					.setTween("#section_3 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: "#section_4"})
+					.setTween("#section_4 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: "#section_5"})
+					.setTween("#section_5 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
+	new ScrollMagic.Scene({triggerElement: "#section_6"})
+					.setTween("#section_6 > div", {y: "80%", ease: Linear.easeNone})
+					.addIndicators()
+					.addTo(controller);
+</script>
+
+
+<!-- <div class="spacer1"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-color: #9AD2CB"></div>
 </div> -->
 
+<div class="section_1">
+<div class="container">
+<div id="title"><div id="oswald">Is AAPI Data <div id="lobster">Misleading?</div></div></div>
+<div id="fact" style="text-align: left">By Danica Liang</div>
+<br>
+<div id="fact">In current statistics, the AAPI (Asian American Pacific Islander) community is categorized as a whole under the group "Asian Americans." This generalization ignores the unique differences of each racial group that make up Asian Americans.</div>
+</div>
+</div>
+
+<div class="spacer2"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-color: #F7FFDD"></div>
+</div>
+
+<div class="section_2">
+<div class="container">
+	<center><object data="problem.svg" type="image/svg+xml" style="width:20%">
+	</object></center>
+	<br>
+	<h1>What's the problem?</h1>
+	<h3><center>We are lumping together groups that are clearly different!</center></h3>
+	<br>
+	<p>
+	AAPI (Asian American Pacific Islander) data groups all members of the AAPI community as simply "Asians Americans." Because of this, the unique differences are each group is overlooked. Hiding this information masks the issues that specific AAPI groups face.
+	</p>
+	<h3><center>How many different countries are Asian Americans from?</center></h3>
+<div class="row">
+<div class="col-sm-6">
+	<br><div id="mapid"></div>
+	<script src="map.js"></script>
+</div>
+<div class="col-sm-6">
+	<br><div id="fact">Asian Americans are from at least <div id="lobster" style="font-size:150px; color: #8CD3C7">23</div> different countries.</div>
+</div>
+</div>
+
+<br><br>
+
+<h3><center>Spot the differences!</center></h3><br>
+
+	<div id="lobster" style="font-size:30px; text-align: center">Level of Education</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<object data="education.svg" type="image/svg+xml" style="width:70%">
+  			<img src="education.png" />
+			</object>
+		</div>
+		<div class="col-sm-6">
+			<object data="education2.svg" type="image/svg+xml" style="width:70%">
+  			<img src="education2.png" />
+			</object>
+		</div>
+	</div>
+
+	<div id="lobster" style="font-size:30px; text-align: center">Mental Health</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<object data="mental_illness2.svg" type="image/svg+xml">
+  			<img src="mental_illness2.png" />
+			</object>
+		</div>
+		<div class="col-sm-6">
+			<object data="mental_illness.svg" type="image/svg+xml">
+  			<img src="mental_illness.png" />
+			</object>
+		</div>
+	</div>
+
+	<div id="lobster" style="font-size:30px; text-align: center">Income</div>
+	<div class="row">
+		<div class="col-sm-6">
+ 			<object data="income.svg" type="image/svg+xml" style="width:80%">
+  			<img src="income.png" />
+			</object>
+		</div>
+		<div class="col-sm-6">
+ 			<object data="income2.svg" type="image/svg+xml" style="width:80%">
+  			<img src="income2.png" />
+			</object>
+		</div>
+	</div>	
+
+</div>
+</div>
+</div>
+
+<div class="spacer3"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-color: #D6E5E3"></div>
+</div>
+
+<div class="section_3">
+<div class="container">
+	<center><object data="why.svg" type="image/svg+xml" style="width:20%">
+	</object></center>
+	<br>
+
+<h1>Why does this matter?</h1>
+
+	<h3 align="left">Reinforces the Model Minority</h3>
+	<p align="left">Current data that only accounts for Asian Americans as a whole disregards the issues that individual AAPI groups face. It reinforces the model minority, the false concept that Asian Americans are the most successful racial minority group socioeconomically.</p>
+
+	<br><br>
+
+	<h3 align="left">Potential for Political Change</h3>
+	<p align="left">Correct data will allow for policy makers to accurately target legislation for communities in need.</p><br>
+
+	<br><br>
+	<h3 align="left">Instrumental to Public Health</h3>
+	<p align="left">There are significant differences among Asian Americans when it comes to risks for diseases like Hepatitis B, cancer, and cardiovascular disease. These differences are worth noting in AAPI data so that health educators can focus on issues that matter.</p><br>
+</div>
+</div>
+
+<div class="spacer4"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-color: #F7FFDD"></div>
+</div>
+
+<div class="section_4">
+<div class="container">
+	<center><object data="solution.svg" type="image/svg+xml" style="width:20%">
+	</object></center>
+	<br>
+	<h1>What is a possible solution?</h1>
+	<h3>Disaggregate AAPI Data</h3><br>
+	<p>Asian Americans are the fastest growing racial group in the country. They are growing over <em>4 times</em> as fast as the entire U.S population.Yet, Asian Americans are one of the <em>most understudied</em> racial groups in the U.S. Disaggregating data has the potential to result in more research to better serve the needs of the AAPI community.</p><br>
+
+	<h3>It's been done!</h3><br>
+	<p>On September 26, 2016, California passed a bill called <b>Accounting for Health and Education in API Demographics (AHEAD) Act</b>. This bill will mandate the state Department of Public Health to break down data it collects by ethnicity or ancestry for AAPI groups.</p>
+
+</div>
+</div>
+
+<div class="spacer5"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-color: #D6E5E3"></div>
+</div>
+
+<div class="section_5">
+<div class="container">
+	<center><object data="speech.svg" type="image/svg+xml" style="width:20%">
+	</object></center>
+	<br>
+<h1>What is the other side saying?</h1><br><br>
+	<div id="fact">"Dividing people into ethnic or other subcategories may yield more information, but not necessarily greater wisdom about what actions should follow." - <b>Jerry Brown</b> (2015)</div>
+	<br><br>
+<div class="row">
+	<div class="col-sm-3">
+	<h3>Affirmative Action</h3><br><p>"This is just one step closer to ending California's ban on affirmative action."</p>
+	</div>
+
+	<div class="col-sm-3">
+	<h3>What about the others?</h3><br><p>"Why does this movement to aggregate data not apply to other racial groups? Like Hispanic and Latino Americans?"</p>
+	</div>
+
+	<div class="col-sm-3">
+		<h3>Division</h3><br><p>
+		"This will divide the Asian American community!"
+		</p>
+	</div>
+
+	<div class="col-sm-3">
+		<h3>Doesn't help</h3><br><p>
+		"What does it say about someone if you know their nationality?"
+		</p>
+	</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="spacer6"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-color: #F7FFDD"></div>
+</div>
+
+<div class="section_6">
+<div class="container">
+	<center><object data="do.svg" type="image/svg+xml" style="width:15%">
+	</object></center>
+	<br>
+<h1>What can you do?</h1><br>
+<div class="row">
+
+	<div class="col-sm-4">
+	<h3>Research</h3><br>
+	<p>Learn more about AAPI data and why it can be misleading.</p>
+	<br>
+	<object data="research.svg" type="image/svg+xml" style="width:50%">
+	</object>
+	</div>
+
+	<div class="col-sm-4">
+	<h3>Get Involved</h3><br>
+	<p>Decide for yourself on where you stand. Look into your local city or state to see how you can contribute your voice and create political change!</p>
+	<br>
+	<object data="involved.svg" type="image/svg+xml" style="width:30%">
+	</object>
+	</div>
+
+	<div class="col-sm-4">
+	<h3>Educate</h3><br>
+	<p>Spread the knowledge. Educate others to increase awareness of this issue.</p>
+	<br><br><br>
+	<object data="educate.svg" type="image/svg+xml" style="width:40%">
+	</object>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="spacer7"></div>
+<div id="parallax1" class="parallaxParent">
+	<div style="background-color: #D6E5E3"></div>
+</div>
+
+<div class="section_7">
+<div class="container">
+	<center><object data="thumbsup.svg" type="image/svg+xml" style="width:10%"></object></center>
+<h1>Thanks for viewing!</h1>
+<p align="center">I cited my sources here.</p>
+</div>
+</div>
+
+</body>
 </html>
 
 

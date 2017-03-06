@@ -1,0 +1,78 @@
+body, html {
+    height: 100%;
+}
+
+.parallaxParent {
+    height: 100vh;
+    overflow: hidden;
+}
+.parallaxParent > * {
+    height: 200%;
+    position: relative;
+    top: -100%;
+}
+
+.section_1, .section_2, .section_3, .section_4, .section_5, .section_6, .section_7 {
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+/* Fonts */
+h1 {
+    font-family: 'Lobster Two', cursive;
+    text-align: center;
+    font-size: 400%;
+}
+
+h2 {
+    font-family: 'Lobster Two', cursive;
+    text-align: center;
+    font-size: 300%;    
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 200%;
+} 
+
+p {
+    font-family: 'Crimson Text', serif;
+/*    text-align: center;*/
+    font-size: 170%;
+}
+
+p em {
+  font-family: 'Lobster Two', cursive;
+  font-size: 120%;
+  color: #8CD3C7;
+}
+
+#lobster {
+    font-family: 'Lobster Two', cursive;
+}
+
+#oswald {
+    font-family: 'Oswald', sans-serif;
+}
+
+#fact {
+    font-family: 'Crimson Text', serif;
+    font-size: 200%;
+    text-align: center;
+}
+
+#title {
+    font-size: 700%;
+}
+
+#mapid {
+    height: 300px;
+    width: 400px;
+    margin-left: 200px;
+    margin-right: 400px;
+}
+
+.row {
+    text-align: center;
+}
+
