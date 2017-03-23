@@ -3,7 +3,7 @@ body, html {
 }
 
 .parallaxParent {
-    height: 100vh;
+    height: 50vh;
     overflow: hidden;
 }
 .parallaxParent > * {
@@ -42,8 +42,11 @@ p {
 }
 
 p em {
-  font-family: 'Lobster Two', cursive;
+/*  font-family: 'Lobster Two', cursive;
   font-size: 120%;
+  color: #8CD3C7;*/
+/*  font-family: 'Crimson Text', serif;
+  font-size: 170%;*/
   color: #8CD3C7;
 }
 
